@@ -72,12 +72,14 @@ body {
   gap: 2rem;
   border-radius: 0.5rem;
   width: 35rem;
+  box-shadow: 0 0 3px gray;
 }
 
 /* Title */
 h1 {
   font-size: 2.5rem;
   position: relative;
+  text-align: center;
 }
 
 h1::after {
@@ -90,6 +92,7 @@ h1::after {
   left: 0;
   right: 0;
   margin-inline: auto;
+  border-radius: 3px;
 }
 
 /* Quote Info */
@@ -97,6 +100,7 @@ h1::after {
   height: 10rem;
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 .author-dash {
@@ -108,6 +112,20 @@ h1::after {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.quote-author::before {
+  content: "\2014";
+  color: #2673df;
+}
+
+.quote-text {
+  font-style: italic;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '"';
 }
 
 /* Buttons */
@@ -150,14 +168,6 @@ h1::after {
     height: 100vh;
     border-radius: 0;
     justify-content: space-between;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .quote-info {
-    text-align: center;
   }
 
   .btn-container {
