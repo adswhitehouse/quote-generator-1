@@ -52,6 +52,115 @@ select {
 }
 /* CSS Reset */
 
+/* Body */
 body {
   font-family: "Playfair Display", serif;
+  background-color: #bbc8fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quote Container */
+.quote-container {
+  background-color: #fefefe;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  width: 35rem;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  background-color: #2673df;
+  position: absolute;
+  bottom: -0.5rem;
+  height: 0.25rem;
+  width: 6rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+
+/* Quote Info */
+.quote-info {
+  height: 10rem;
+  position: relative;
+}
+
+.author-dash {
+  color: #2673df;
+}
+
+.quote-author {
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-quote {
+  background-color: #2673df;
+  color: #fefefe;
+  border: none;
+  border-radius: 5rem;
+  width: 7.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.tweet {
+  background-color: transparent;
+  border: 2px solid #2673df;
+  border-radius: 5rem;
+  height: 2.5rem;
+  width: 7.5rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-twitter {
+  color: #2673df;
+}
+
+/* Media Query */
+@media screen and (max-width: 35rem) {
+  .quote-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .quote-info {
+    text-align: center;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
