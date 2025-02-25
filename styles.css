@@ -96,6 +96,7 @@ h1::after {
 .quote-info {
   height: 10rem;
   position: relative;
+  width: 100%;
 }
 
 .author-dash {
